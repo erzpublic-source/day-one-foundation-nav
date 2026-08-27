@@ -118,7 +118,7 @@ function Home() {
         <section className="relative overflow-hidden bg-secondary/40">
           <div className="mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-8 pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
             <div className="order-2 md:order-1">
-              <h1 className="animate-fade-in text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
+              <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para
                 <br />
@@ -331,7 +331,7 @@ function Home() {
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
               {["Privacidad", "Términos", "Nosotros"].map((l) => (
                 <li key={l}>
-                  <span className="story-link cursor-default">{l}</span>
+                  <span className="cursor-default transition-colors duration-300 hover:text-violeta">{l}</span>
                 </li>
               ))}
             </ul>
