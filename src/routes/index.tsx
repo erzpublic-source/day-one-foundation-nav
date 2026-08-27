@@ -116,7 +116,7 @@ function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40">
-          <div className="mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-8 pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
+          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-8 pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
             <div className="order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
@@ -133,23 +133,27 @@ function Home() {
                   Quiero ayudar
                 </button>
               </div>
-
-              <Reveal delay={120}>
-                <div
-                  className="mt-10 rounded-3xl bg-card p-6 md:mt-14 md:max-w-[520px] md:translate-x-8"
-                  style={{ boxShadow: "var(--shadow-n2)" }}
-                >
-                  <span className="eyebrow inline-flex items-center gap-2 rounded-full bg-azul/10 px-3 py-1.5 text-azul">
-                    <span className="h-1.5 w-1.5 rounded-full bg-azul" />
-                    Salud mental con propósito
-                  </span>
-                  <p className="mt-4 text-[1.02rem] leading-relaxed text-muted-foreground">
-                    Transformamos el silencio en música, el dolor en propósito y la soledad en una
-                    comunidad que sostiene.
-                  </p>
-                </div>
-              </Reveal>
             </div>
+
+            <Reveal
+              delay={120}
+              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-20 md:w-[440px]"
+            >
+              <div
+                className="mt-10 rounded-3xl bg-card p-6 md:mt-0"
+                style={{ boxShadow: "var(--shadow-n3)" }}
+              >
+                <span className="eyebrow inline-flex items-center gap-2 rounded-full bg-azul/10 px-3 py-1.5 text-azul">
+                  <span className="h-1.5 w-1.5 rounded-full bg-azul" />
+                  Salud mental con propósito
+                </span>
+                <p className="mt-4 text-[1.02rem] leading-relaxed text-muted-foreground">
+                  Transformamos el silencio en música, el dolor en propósito y la soledad en una
+                  comunidad que sostiene.
+                </p>
+              </div>
+            </Reveal>
+
 
             <div className="order-1 md:order-2 md:-mr-[72px]">
               <img
