@@ -116,7 +116,7 @@ function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40">
-          <div className="mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-8 pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
+          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-8 pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
             <div className="order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
@@ -133,23 +133,27 @@ function Home() {
                   Quiero ayudar
                 </button>
               </div>
-
-              <Reveal delay={120}>
-                <div
-                  className="mt-10 rounded-3xl bg-card p-6 md:mt-14 md:max-w-[520px] md:translate-x-8"
-                  style={{ boxShadow: "var(--shadow-n2)" }}
-                >
-                  <span className="eyebrow inline-flex items-center gap-2 rounded-full bg-azul/10 px-3 py-1.5 text-azul">
-                    <span className="h-1.5 w-1.5 rounded-full bg-azul" />
-                    Salud mental con propósito
-                  </span>
-                  <p className="mt-4 text-[1.02rem] leading-relaxed text-muted-foreground">
-                    Transformamos el silencio en música, el dolor en propósito y la soledad en una
-                    comunidad que sostiene.
-                  </p>
-                </div>
-              </Reveal>
             </div>
+
+            <Reveal
+              delay={120}
+              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-20 md:w-[440px]"
+            >
+              <div
+                className="mt-10 rounded-3xl bg-card p-6 md:mt-0"
+                style={{ boxShadow: "var(--shadow-n3)" }}
+              >
+                <span className="eyebrow inline-flex items-center gap-2 rounded-full bg-azul/10 px-3 py-1.5 text-azul">
+                  <span className="h-1.5 w-1.5 rounded-full bg-azul" />
+                  Salud mental con propósito
+                </span>
+                <p className="mt-4 text-[1.02rem] leading-relaxed text-muted-foreground">
+                  Transformamos el silencio en música, el dolor en propósito y la soledad en una
+                  comunidad que sostiene.
+                </p>
+              </div>
+            </Reveal>
+
 
             <div className="order-1 md:order-2 md:-mr-[72px]">
               <img
@@ -196,7 +200,7 @@ function Home() {
         </section>
 
         {/* IMPACTO */}
-        <section className="bg-secondary/50 py-16 md:py-24">
+        <section className="bg-[#FAFAF8] py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal>
               <p className="eyebrow text-muted-foreground">Impacto</p>
@@ -259,7 +263,7 @@ function Home() {
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal>
               <div
-                className="grid overflow-hidden rounded-[32px] bg-card md:grid-cols-[0.85fr_1.15fr]"
+                className="grid overflow-hidden rounded-[32px] bg-card md:h-[340px] md:grid-cols-[0.85fr_1.15fr]"
                 style={{ boxShadow: "var(--shadow-n2)" }}
               >
                 <img
@@ -270,7 +274,7 @@ function Home() {
                   height={1000}
                   className="h-56 w-full object-cover md:h-full"
                 />
-                <div className="p-7 md:p-12">
+                <div className="p-7 md:overflow-auto md:p-10">
                   <p className="eyebrow text-muted-foreground">Apóyanos</p>
                   <h2 className="mt-3 text-2xl leading-tight font-light tracking-tight md:text-[2.1rem]">
                     Tu donación salva mañanas
@@ -296,7 +300,7 @@ function Home() {
         </section>
 
         {/* ALIADOS */}
-        <section className="border-t border-border/60 bg-background py-14">
+        <section className="border-t border-border/60 bg-[#FFFFFF] py-14">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-center">
               <p className="eyebrow text-muted-foreground">
@@ -318,7 +322,7 @@ function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-secondary/60 pt-14">
+      <footer className="bg-[#FAFAF8] pt-14">
         <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-6 pb-10 md:grid-cols-4 lg:px-[72px]">
           <div>
             <Logo compact />
