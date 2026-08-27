@@ -90,7 +90,7 @@ export function MobileNav() {
         </button>
         <button type="button" className="btn-base btn-sos flex-1 py-3">
           <MessageSquare className="h-5 w-5 shrink-0" strokeWidth={2.4} />
-          <span className="text-base">
+          <span>
             SOS <span className="font-normal">Te escucho</span>
           </span>
         </button>

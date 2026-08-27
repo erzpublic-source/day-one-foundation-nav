@@ -200,7 +200,7 @@ function Home() {
         </section>
 
         {/* IMPACTO */}
-        <section className="bg-secondary/50 py-16 md:py-24">
+        <section className="bg-[#FAFAF8] py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal>
               <p className="eyebrow text-muted-foreground">Impacto</p>
@@ -263,7 +263,7 @@ function Home() {
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal>
               <div
-                className="grid overflow-hidden rounded-[32px] bg-card md:grid-cols-[0.85fr_1.15fr]"
+                className="grid overflow-hidden rounded-[32px] bg-card md:h-[340px] md:grid-cols-[0.85fr_1.15fr]"
                 style={{ boxShadow: "var(--shadow-n2)" }}
               >
                 <img
@@ -274,7 +274,7 @@ function Home() {
                   height={1000}
                   className="h-56 w-full object-cover md:h-full"
                 />
-                <div className="p-7 md:p-12">
+                <div className="p-7 md:overflow-auto md:p-10">
                   <p className="eyebrow text-muted-foreground">Apóyanos</p>
                   <h2 className="mt-3 text-2xl leading-tight font-light tracking-tight md:text-[2.1rem]">
                     Tu donación salva mañanas
@@ -300,7 +300,7 @@ function Home() {
         </section>
 
         {/* ALIADOS */}
-        <section className="border-t border-border/60 bg-background py-14">
+        <section className="border-t border-border/60 bg-[#FFFFFF] py-14">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-center">
               <p className="eyebrow text-muted-foreground">
@@ -322,7 +322,7 @@ function Home() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-secondary/60 pt-14">
+      <footer className="bg-[#FAFAF8] pt-14">
         <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-6 pb-10 md:grid-cols-4 lg:px-[72px]">
           <div>
             <Logo compact />
