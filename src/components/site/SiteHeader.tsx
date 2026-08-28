@@ -56,33 +56,32 @@ export function SiteHeader() {
           scrolled ? "glass-nav border-b border-border/60" : "bg-transparent"
         }`}
       >
-      <div
-        className={`mx-auto flex w-full max-w-[1280px] items-center gap-6 px-6 transition-all duration-500 lg:px-[72px] ${
-          scrolled ? "py-2.5" : "py-5"
-        }`}
-      >
-        <Logo compact={scrolled} />
+        <div className="mx-auto flex h-[72px] w-full max-w-[1280px] items-center gap-6 px-6 lg:px-[72px]">
+          <Logo compact={scrolled} />
 
-        {scrolled && <NavList className="flex-1 justify-center" />}
-        {!scrolled && <span className="flex-1" />}
+          {scrolled && <NavList className="flex-1 justify-center" />}
+          {!scrolled && <span className="flex-1" />}
 
-        <button
-          type="button"
-          className="btn-base btn-sos shrink-0 px-5 py-2.5"
-          aria-label="Abrir canal SOS Te escucho"
-        >
-          <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />
-          <span className="text-sm font-bold">
-            SOS <span className="font-bold">Te escucho</span>
-          </span>
-        </button>
-      </div>
-
-      {!scrolled && (
-        <div className="border-t border-transparent transition-colors duration-500">
-          <NavList className="mx-auto w-full max-w-[1280px] px-6 py-3 lg:px-[72px]" />
+          <button
+            type="button"
+            className="btn-base btn-sos shrink-0 px-5 py-2.5"
+            aria-label="Abrir canal SOS Te escucho"
+          >
+            <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />
+            <span className="text-sm font-bold">
+              SOS <span className="font-bold">Te escucho</span>
+            </span>
+          </button>
         </div>
-      )}
+
+        {!scrolled && (
+          <>
+            <div className="h-px w-full" style={{ backgroundColor: "#D9D9D9" }} />
+            <div className="transition-colors duration-500">
+              <NavList className="mx-auto w-full max-w-[1280px] px-6 py-3 lg:px-[72px]" />
+            </div>
+          </>
+        )}
       </header>
     </>
   );
