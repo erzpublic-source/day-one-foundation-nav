@@ -45,11 +45,17 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 hidden transition-all duration-500 ease-out md:block ${
-        scrolled ? "glass-nav border-b border-border/60" : "bg-transparent"
-      }`}
-    >
+    <>
+      {/* Header mobile: logo centrado 178x24 sobre fondo #FAFAF8 */}
+      <div className="fixed inset-x-0 top-0 z-50 flex justify-center bg-[#FAFAF8] py-3 md:hidden">
+        <Logo imgClassName="!h-6 !w-[178px] object-contain object-center" />
+      </div>
+
+      <header
+        className={`fixed inset-x-0 top-0 z-50 hidden transition-all duration-500 ease-out md:block ${
+          scrolled ? "glass-nav border-b border-border/60" : "bg-transparent"
+        }`}
+      >
       <div
         className={`mx-auto flex w-full max-w-[1280px] items-center gap-6 px-6 transition-all duration-500 lg:px-[72px] ${
           scrolled ? "py-2.5" : "py-5"
@@ -66,8 +72,8 @@ export function SiteHeader() {
           aria-label="Abrir canal SOS Te escucho"
         >
           <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />
-          <span>
-            SOS <span className="font-normal">Te escucho</span>
+          <span className="text-sm font-bold">
+            SOS <span className="font-bold">Te escucho</span>
           </span>
         </button>
       </div>
@@ -77,6 +83,7 @@ export function SiteHeader() {
           <NavList className="mx-auto w-full max-w-[1280px] px-6 py-3 lg:px-[72px]" />
         </div>
       )}
-    </header>
+      </header>
+    </>
   );
 }

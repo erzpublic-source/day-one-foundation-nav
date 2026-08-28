@@ -116,13 +116,13 @@ function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40">
-          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-8 pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
+          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
             <div className="order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para
                 <br />
-                <span className="text-gradient-brand font-bold">volver a brillar</span>
+                <span className="text-gradient-brand font-bold whitespace-nowrap">volver a brillar</span>
               </h1>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -170,8 +170,8 @@ function Home() {
         {/* ESENCIA */}
         <section className="bg-card py-16 md:py-24">
           <div className="mx-auto w-full max-w-[900px] px-6 lg:px-[72px]">
-            <Reveal className="text-center">
-              <p className="eyebrow text-muted-foreground">Nuestra esencia</p>
+            <Reveal className="text-left md:text-center">
+              <p className="eyebrow text-[#9981C1]">Nuestra esencia</p>
               <h2 className="mt-3 text-3xl font-light tracking-tight md:text-[2.3rem]">
                 Para volver a empezar
               </h2>
@@ -203,7 +203,7 @@ function Home() {
         <section className="bg-[#FAFAF8] py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal>
-              <p className="eyebrow text-muted-foreground">Impacto</p>
+              <p className="eyebrow text-[#9981C1]">Impacto</p>
               <h2 className="mt-3 text-3xl font-light tracking-tight md:text-[2.3rem]">
                 Explora nuestro impacto
               </h2>
@@ -275,7 +275,7 @@ function Home() {
                   className="h-56 w-full object-cover md:h-full"
                 />
                 <div className="p-7 md:overflow-auto md:p-10">
-                  <p className="eyebrow text-muted-foreground">Apóyanos</p>
+                  <p className="eyebrow text-[#9981C1]">Apóyanos</p>
                   <h2 className="mt-3 text-2xl leading-tight font-light tracking-tight md:text-[2.1rem]">
                     Tu donación salva mañanas
                   </h2>
@@ -303,7 +303,7 @@ function Home() {
         <section className="border-t border-border/60 bg-[#FFFFFF] py-14">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-center">
-              <p className="eyebrow text-muted-foreground">
+              <p className="eyebrow text-[#9981C1]">
                 Instituciones que confían en nosotros
               </p>
               <div className="mt-8 grid grid-cols-2 items-center gap-6 sm:grid-cols-3 md:grid-cols-5">
@@ -326,13 +326,13 @@ function Home() {
         <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-6 pb-10 md:grid-cols-4 lg:px-[72px]">
           <div>
             <Logo compact />
-            <p className="mt-4 max-w-[30ch] text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-sm leading-relaxed text-[#6A5390] md:max-w-[30ch]">
               Unidos por la salud mental y el bienestar emocional de nuestra comunidad.
             </p>
           </div>
           <div>
-            <p className="eyebrow text-violeta">Enlaces</p>
-            <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
+            <p className="eyebrow text-[#6B7280]">Enlaces</p>
+            <ul className="mt-4 space-y-2.5 text-sm text-[#6A5390]">
               {["Privacidad", "Términos", "Nosotros"].map((l) => (
                 <li key={l}>
                   <span className="cursor-default transition-colors duration-300 hover:text-violeta">{l}</span>
@@ -341,14 +341,14 @@ function Home() {
             </ul>
           </div>
           <div>
-            <p className="eyebrow text-violeta">Contacto</p>
-            <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
+            <p className="eyebrow text-[#6B7280]">Contacto</p>
+            <ul className="mt-4 space-y-2.5 text-sm text-[#6A5390]">
               <li>info@fundacionundiamas.org</li>
               <li>+57 300 000 0000</li>
             </ul>
           </div>
           <div>
-            <p className="eyebrow text-violeta">Síguenos</p>
+            <p className="eyebrow text-[#6B7280]">Síguenos</p>
             <div className="mt-4 flex gap-3">
               {["Facebook", "YouTube", "Instagram"].map((red) => (
                 <span
@@ -364,7 +364,7 @@ function Home() {
           </div>
         </div>
         <div className="border-t border-border/60 py-5">
-          <p className="mx-auto w-full max-w-[1280px] px-6 text-xs text-muted-foreground lg:px-[72px]">
+          <p className="mx-auto w-full max-w-[1280px] px-6 text-xs text-[#6A5390] lg:px-[72px]">
             © 2026 Fundación Un Día Más. Todos los derechos reservados.
           </p>
         </div>

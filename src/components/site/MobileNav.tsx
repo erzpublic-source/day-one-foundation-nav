@@ -88,10 +88,14 @@ export function MobileNav() {
           </span>
           <span className="text-sm font-bold">Menú</span>
         </button>
-        <button type="button" className="btn-base btn-sos flex-1 py-3">
-          <MessageSquare className="h-5 w-5 shrink-0" strokeWidth={2.4} />
-          <span>
-            SOS <span className="font-normal">Te escucho</span>
+        <span className="flex-1" />
+        <button
+          type="button"
+          className="btn-base btn-sos h-[30px] w-[162px] shrink-0 px-0 py-0"
+        >
+          <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />
+          <span className="text-sm font-bold">
+            SOS <span className="font-bold">Te escucho</span>
           </span>
         </button>
       </div>
