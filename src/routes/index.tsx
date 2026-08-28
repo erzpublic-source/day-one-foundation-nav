@@ -326,13 +326,13 @@ function Home() {
         <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-6 pb-10 md:grid-cols-4 lg:px-[72px]">
           <div>
             <Logo compact />
-            <p className="mt-4 max-w-[30ch] text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-sm leading-relaxed text-[#6A5390] md:max-w-[30ch]">
               Unidos por la salud mental y el bienestar emocional de nuestra comunidad.
             </p>
           </div>
           <div>
-            <p className="eyebrow text-violeta">Enlaces</p>
-            <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
+            <p className="eyebrow text-[#6B7280]">Enlaces</p>
+            <ul className="mt-4 space-y-2.5 text-sm text-[#6A5390]">
               {["Privacidad", "Términos", "Nosotros"].map((l) => (
                 <li key={l}>
                   <span className="cursor-default transition-colors duration-300 hover:text-violeta">{l}</span>
@@ -341,14 +341,14 @@ function Home() {
             </ul>
           </div>
           <div>
-            <p className="eyebrow text-violeta">Contacto</p>
-            <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
+            <p className="eyebrow text-[#6B7280]">Contacto</p>
+            <ul className="mt-4 space-y-2.5 text-sm text-[#6A5390]">
               <li>info@fundacionundiamas.org</li>
               <li>+57 300 000 0000</li>
             </ul>
           </div>
           <div>
-            <p className="eyebrow text-violeta">Síguenos</p>
+            <p className="eyebrow text-[#6B7280]">Síguenos</p>
             <div className="mt-4 flex gap-3">
               {["Facebook", "YouTube", "Instagram"].map((red) => (
                 <span
@@ -364,7 +364,7 @@ function Home() {
           </div>
         </div>
         <div className="border-t border-border/60 py-5">
-          <p className="mx-auto w-full max-w-[1280px] px-6 text-xs text-muted-foreground lg:px-[72px]">
+          <p className="mx-auto w-full max-w-[1280px] px-6 text-xs text-[#6A5390] lg:px-[72px]">
             © 2026 Fundación Un Día Más. Todos los derechos reservados.
           </p>
         </div>
