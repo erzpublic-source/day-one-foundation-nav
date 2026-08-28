@@ -83,6 +83,7 @@ export function SiteHeader() {
           <NavList className="mx-auto w-full max-w-[1280px] px-6 py-3 lg:px-[72px]" />
         </div>
       )}
-    </header>
+      </header>
+    </>
   );
 }
