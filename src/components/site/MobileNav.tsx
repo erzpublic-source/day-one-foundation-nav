@@ -27,12 +27,11 @@ export function MobileNav() {
 
       {/* Panel que se despliega hacia arriba */}
       <div
-        className={`fixed inset-x-3 bottom-[5.5rem] z-50 origin-bottom rounded-[24px] border border-border/70 bg-card p-3 transition-all duration-400 ease-out ${
+        className={`glass-nav fixed inset-x-3 bottom-[5.5rem] z-50 origin-bottom rounded-[24px] border border-border/70 p-3 transition-all duration-400 ease-out ${
           open
             ? "translate-y-0 scale-100 opacity-100"
             : "pointer-events-none translate-y-6 scale-[0.97] opacity-0"
         }`}
-        style={{ boxShadow: "var(--shadow-n3)" }}
         role="dialog"
         aria-label="Menú principal"
       >
