@@ -45,11 +45,17 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 hidden transition-all duration-500 ease-out md:block ${
-        scrolled ? "glass-nav border-b border-border/60" : "bg-transparent"
-      }`}
-    >
+    <>
+      {/* Header mobile: logo centrado 178x24 sobre fondo #FAFAF8 */}
+      <div className="fixed inset-x-0 top-0 z-50 flex justify-center bg-[#FAFAF8] py-3 md:hidden">
+        <Logo imgClassName="!h-6 !w-[178px] object-contain object-center" />
+      </div>
+
+      <header
+        className={`fixed inset-x-0 top-0 z-50 hidden transition-all duration-500 ease-out md:block ${
+          scrolled ? "glass-nav border-b border-border/60" : "bg-transparent"
+        }`}
+      >
       <div
         className={`mx-auto flex w-full max-w-[1280px] items-center gap-6 px-6 transition-all duration-500 lg:px-[72px] ${
           scrolled ? "py-2.5" : "py-5"
