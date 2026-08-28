@@ -72,8 +72,8 @@ export function SiteHeader() {
           aria-label="Abrir canal SOS Te escucho"
         >
           <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />
-          <span>
-            SOS <span className="font-normal">Te escucho</span>
+          <span className="text-sm font-bold">
+            SOS <span className="font-bold">Te escucho</span>
           </span>
         </button>
       </div>
