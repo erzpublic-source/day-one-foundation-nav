@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
 import { AlignLeft, MessageSquare, X } from "lucide-react";
 
-const NAV = ["Inicio", "Historias", "Eventos", "Donar", "Voluntariado", "Contacto"];
+import { NAV_ITEMS } from "./nav-items";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
