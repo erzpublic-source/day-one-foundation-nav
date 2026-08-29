@@ -117,12 +117,14 @@ function Home() {
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40">
           <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
-            <div className="order-2 md:order-1">
+            <div className="relative z-10 order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
-                Un espacio{" "}
-                <span className="hidden md:inline">seguro para</span>
-                <span className="inline md:hidden">seguro para{" "}</span>
-                <span className="text-gradient-brand font-bold whitespace-nowrap">volver a brillar</span>
+                Un espacio
+                <br className="hidden md:block" /> seguro para{" "}
+                <br className="hidden md:block" />
+                <span className="text-gradient-brand font-bold whitespace-nowrap">
+                  volver a brillar
+                </span>
               </h1>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
