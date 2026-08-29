@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "@tanstack/react-router";
 import { AlignLeft, MessageSquare, X } from "lucide-react";
 
-const NAV = ["Inicio", "Historias", "Eventos", "Donar", "Voluntariado", "Contacto"];
+import { NAV_ITEMS } from "./nav-items";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -36,28 +37,46 @@ export function MobileNav() {
         aria-label="Menú principal"
       >
         <ul className="flex flex-col">
-          {NAV.map((item, i) => {
-            const active = i === 0;
+          {NAV_ITEMS.map((item, i) => {
+            const active = !!item.to && pathname === item.to;
+            const cls = `flex w-full items-center gap-2 rounded-full px-5 py-3.5 text-left text-lg transition-all duration-300 active:scale-[0.98] ${
+              active
+                ? "bg-accent font-bold text-violeta"
+                : "font-medium text-violeta/85 hover:bg-secondary"
+            }`;
+            const style = {
+              transitionDelay: open ? `${60 + i * 45}ms` : "0ms",
+              opacity: open ? 1 : 0,
+              transform: open ? "none" : "translateY(10px)",
+            } as const;
+            const inner = (
+              <>
+                {active && <span className="h-2 w-2 rounded-full bg-violeta" />}
+                {item.label}
+              </>
+            );
             return (
-              <li key={item}>
-                <button
-                  type="button"
-                  onClick={() => setOpen(false)}
-                  aria-current={active ? "page" : undefined}
-                  className={`flex w-full items-center gap-2 rounded-full px-5 py-3.5 text-left text-lg transition-all duration-300 active:scale-[0.98] ${
-                    active
-                      ? "bg-accent font-bold text-violeta"
-                      : "font-medium text-violeta/85 hover:bg-secondary"
-                  }`}
-                  style={{
-                    transitionDelay: open ? `${60 + i * 45}ms` : "0ms",
-                    opacity: open ? 1 : 0,
-                    transform: open ? "none" : "translateY(10px)",
-                  }}
-                >
-                  {active && <span className="h-2 w-2 rounded-full bg-violeta" />}
-                  {item}
-                </button>
+              <li key={item.label}>
+                {item.to ? (
+                  <Link
+                    to={item.to}
+                    onClick={() => setOpen(false)}
+                    aria-current={active ? "page" : undefined}
+                    className={cls}
+                    style={style}
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setOpen(false)}
+                    className={cls}
+                    style={style}
+                  >
+                    {inner}
+                  </button>
+                )}
               </li>
             );
           })}
