@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight, Eye, HandHeart, Sparkles, Users } from "lucide-react";
 
-import heroImg from "@/assets/hero-conversacion.png";
+import heroImg from "@/assets/hero-conversacion.jpg";
 import cardHistorias from "@/assets/card-historias.jpg";
 import cardEventos from "@/assets/card-eventos.jpg";
 import cardVoluntariado from "@/assets/card-voluntariado.jpg";
@@ -163,7 +163,7 @@ function Home() {
                 alt="Dos mujeres conversando en un espacio de escucha activa"
                 width={1408}
                 height={1104}
-                className="h-[280px] w-full object-contain object-center md:h-[560px]"
+                className="h-[280px] w-full rounded-3xl object-cover object-center md:h-[560px] md:rounded-l-[40px] md:rounded-r-none"
               />
             </div>
           </div>
