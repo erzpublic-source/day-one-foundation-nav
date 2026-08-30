@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { ArrowRight, HandHeart, Headphones, Play, Video, Youtube } from "lucide-react";
 
 import historiaJaime from "@/assets/historia-jaime.jpg";
@@ -12,6 +13,8 @@ import { Logo } from "@/components/site/Logo";
 import { MobileNav } from "@/components/site/MobileNav";
 import { Reveal } from "@/components/site/Reveal";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { VideoModal } from "@/components/site/VideoModal";
+
 
 export const Route = createFileRoute("/historias")({
   head: () => ({
@@ -71,8 +74,14 @@ const ACUSTICOS = [
   },
 ];
 
+const VIDEO_ID = "C5xYXV6LsWc";
+const VIDEO_URL = "https://youtu.be/C5xYXV6LsWc";
+
 function Historias() {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
+
     <div className="min-h-screen bg-background pb-24 md:pb-0">
       <SiteHeader />
       <MobileNav />
@@ -130,9 +139,11 @@ function Historias() {
             <Reveal delay={90}>
               <button
                 type="button"
-                aria-label="Ver entrevista con Jaime Valencia en el canal"
+                aria-label="Ver entrevista con Jaime Valencia"
+                onClick={() => setVideoOpen(true)}
                 className="group mt-10 grid w-full cursor-pointer overflow-hidden rounded-[32px] bg-card text-left transition-all duration-400 ease-out hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-lavanda/40 md:grid-cols-[0.9fr_1.1fr]"
                 style={{ boxShadow: "var(--shadow-n1)" }}
+
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "var(--shadow-n3)";
                 }}
@@ -382,6 +393,15 @@ function Historias() {
           </p>
         </div>
       </footer>
+
+      <VideoModal
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        title="Un Día Más con JAIME VALENCIA"
+        videoId={VIDEO_ID}
+        watchUrl={VIDEO_URL}
+      />
     </div>
+
   );
 }
