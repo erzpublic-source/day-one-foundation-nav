@@ -139,9 +139,11 @@ function Historias() {
             <Reveal delay={90}>
               <button
                 type="button"
-                aria-label="Ver entrevista con Jaime Valencia en el canal"
+                aria-label="Ver entrevista con Jaime Valencia"
+                onClick={() => setVideoOpen(true)}
                 className="group mt-10 grid w-full cursor-pointer overflow-hidden rounded-[32px] bg-card text-left transition-all duration-400 ease-out hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-lavanda/40 md:grid-cols-[0.9fr_1.1fr]"
                 style={{ boxShadow: "var(--shadow-n1)" }}
+
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "var(--shadow-n3)";
                 }}
