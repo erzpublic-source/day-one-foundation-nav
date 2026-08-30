@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { MessageSquare } from "lucide-react";
 
 import { Logo } from "./Logo";
 import { NAV_ITEMS } from "./nav-items";
 
 function NavList({ className = "" }: { className?: string }) {
-  const { pathname } = useLocation();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
 
   return (
     <nav className={`flex items-center gap-1 ${className}`} aria-label="Navegación principal">
