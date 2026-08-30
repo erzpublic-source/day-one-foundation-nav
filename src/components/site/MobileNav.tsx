@@ -6,6 +6,7 @@ import { NAV_ITEMS } from "./nav-items";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
