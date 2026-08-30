@@ -393,6 +393,15 @@ function Historias() {
           </p>
         </div>
       </footer>
+
+      <VideoModal
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        title="Un Día Más con JAIME VALENCIA"
+        videoId={VIDEO_ID}
+        watchUrl={VIDEO_URL}
+      />
     </div>
+
   );
 }
