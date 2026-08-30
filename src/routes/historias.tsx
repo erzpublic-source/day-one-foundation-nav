@@ -109,10 +109,18 @@ function Historias() {
                 Descubre las entrevistas y acústicos en nuestro canal de YouTube.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <button type="button" className="btn-base btn-primary">
+                <button
+                  type="button"
+                  className="btn-base btn-primary"
+                  onClick={() => smoothScrollTo("entrevistas")}
+                >
                   Ver Entrevistas
                 </button>
-                <button type="button" className="btn-base btn-tertiary">
+                <button
+                  type="button"
+                  className="btn-base btn-tertiary"
+                  onClick={() => smoothScrollTo("acusticos")}
+                >
                   Ver Acústicos
                 </button>
               </div>
@@ -121,7 +129,7 @@ function Historias() {
         </section>
 
         {/* ENTREVISTAS */}
-        <section className="bg-[#FAFAF8] py-16 md:py-24">
+        <section id="entrevistas" className="bg-[#FAFAF8] py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-left md:text-center">
               <p className="eyebrow text-[#9981C1]">Entrevistas</p>
@@ -270,7 +278,7 @@ function Historias() {
         </section>
 
         {/* ACÚSTICOS */}
-        <section className="bg-rosa-soft py-16 md:py-24">
+        <section id="acusticos" className="bg-rosa-soft py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-center">
               <p className="eyebrow text-[#9981C1]">Acústicos</p>
