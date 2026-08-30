@@ -77,6 +77,34 @@ const ACUSTICOS = [
 const VIDEO_ID = "C5xYXV6LsWc";
 const VIDEO_URL = "https://youtu.be/C5xYXV6LsWc";
 
+function smoothScrollTo(targetId: string) {
+  const element = document.getElementById(targetId);
+  if (!element) return;
+
+  const startY = window.scrollY;
+  const targetY = element.getBoundingClientRect().top + startY - 80;
+  const distance = targetY - startY;
+  const duration = 900;
+  let startTime: number | null = null;
+
+  const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+  const step = (timestamp: number) => {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutCubic(progress);
+
+    window.scrollTo(0, startY + distance * eased);
+
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  requestAnimationFrame(step);
+}
+
 function Historias() {
   const [videoOpen, setVideoOpen] = useState(false);
 
@@ -109,10 +137,18 @@ function Historias() {
                 Descubre las entrevistas y acústicos en nuestro canal de YouTube.
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <button type="button" className="btn-base btn-primary">
+                <button
+                  type="button"
+                  className="btn-base btn-primary"
+                  onClick={() => smoothScrollTo("entrevistas")}
+                >
                   Ver Entrevistas
                 </button>
-                <button type="button" className="btn-base btn-tertiary">
+                <button
+                  type="button"
+                  className="btn-base btn-tertiary"
+                  onClick={() => smoothScrollTo("acusticos")}
+                >
                   Ver Acústicos
                 </button>
               </div>
@@ -121,7 +157,7 @@ function Historias() {
         </section>
 
         {/* ENTREVISTAS */}
-        <section className="bg-[#FAFAF8] py-16 md:py-24">
+        <section id="entrevistas" className="bg-[#FAFAF8] py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-left md:text-center">
               <p className="eyebrow text-[#9981C1]">Entrevistas</p>
@@ -270,7 +306,7 @@ function Historias() {
         </section>
 
         {/* ACÚSTICOS */}
-        <section className="bg-rosa-soft py-16 md:py-24">
+        <section id="acusticos" className="bg-rosa-soft py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal className="text-center">
               <p className="eyebrow text-[#9981C1]">Acústicos</p>
