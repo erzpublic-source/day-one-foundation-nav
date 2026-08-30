@@ -77,6 +77,34 @@ const ACUSTICOS = [
 const VIDEO_ID = "C5xYXV6LsWc";
 const VIDEO_URL = "https://youtu.be/C5xYXV6LsWc";
 
+function smoothScrollTo(targetId: string) {
+  const element = document.getElementById(targetId);
+  if (!element) return;
+
+  const startY = window.scrollY;
+  const targetY = element.getBoundingClientRect().top + startY - 80;
+  const distance = targetY - startY;
+  const duration = 900;
+  let startTime: number | null = null;
+
+  const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+  const step = (timestamp: number) => {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = easeOutCubic(progress);
+
+    window.scrollTo(0, startY + distance * eased);
+
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  };
+
+  requestAnimationFrame(step);
+}
+
 function Historias() {
   const [videoOpen, setVideoOpen] = useState(false);
 
