@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import { ArrowRight, HandHeart, Headphones, Play, Video, Youtube } from "lucide-react";
 
 import historiaJaime from "@/assets/historia-jaime.jpg";
@@ -12,6 +13,8 @@ import { Logo } from "@/components/site/Logo";
 import { MobileNav } from "@/components/site/MobileNav";
 import { Reveal } from "@/components/site/Reveal";
 import { SiteHeader } from "@/components/site/SiteHeader";
+import { VideoModal } from "@/components/site/VideoModal";
+
 
 export const Route = createFileRoute("/historias")({
   head: () => ({
