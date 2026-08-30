@@ -74,8 +74,14 @@ const ACUSTICOS = [
   },
 ];
 
+const VIDEO_ID = "C5xYXV6LsWc";
+const VIDEO_URL = "https://youtu.be/C5xYXV6LsWc";
+
 function Historias() {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
+
     <div className="min-h-screen bg-background pb-24 md:pb-0">
       <SiteHeader />
       <MobileNav />
