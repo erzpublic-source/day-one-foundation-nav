@@ -116,8 +116,8 @@ function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40 md:min-h-[720px] lg:min-h-[780px]">
-          <div className="relative mx-auto grid w-full max-w-[1280px] items-start gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-[136px] md:pb-20 lg:px-[72px]">
-            <div className="relative z-10 order-2 md:order-1 md:max-w-[520px] lg:max-w-[640px]">
+          <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 pt-[72px] pb-12 md:pt-[136px] md:pb-20 lg:px-[72px]">
+            <div className="relative z-10 w-full max-w-[560px] md:max-w-[600px] lg:max-w-[640px]">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para{" "}
