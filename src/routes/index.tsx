@@ -128,11 +128,19 @@ function Home() {
               </h1>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <button type="button" className="btn-base btn-primary">
-                  Necesito ayuda
+                <button
+                  type="button"
+                  className="btn-base btn-primary"
+                  onClick={() => document.getElementById("esencia")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Nuestra esencia
                 </button>
-                <button type="button" className="btn-base btn-tertiary">
-                  Quiero ayudar
+                <button
+                  type="button"
+                  className="btn-base btn-tertiary"
+                  onClick={() => document.getElementById("impacto")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Nuestro impacto
                 </button>
               </div>
             </div>
