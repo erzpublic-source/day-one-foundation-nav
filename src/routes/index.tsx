@@ -178,7 +178,7 @@ function Home() {
         </section>
 
         {/* ESENCIA */}
-        <section className="bg-card py-16 md:py-24">
+        <section id="esencia" className="bg-card py-16 md:py-24">
           <div className="mx-auto w-full max-w-[900px] px-6 lg:px-[72px]">
             <Reveal className="text-left md:text-center">
               <p className="eyebrow text-[#9981C1]">Nuestra esencia</p>
@@ -210,7 +210,7 @@ function Home() {
         </section>
 
         {/* IMPACTO */}
-        <section className="bg-[#FAFAF8] py-16 md:py-24">
+        <section id="impacto" className="bg-[#FAFAF8] py-16 md:py-24">
           <div className="mx-auto w-full max-w-[1280px] px-6 lg:px-[72px]">
             <Reveal>
               <p className="eyebrow text-[#9981C1]">Impacto</p>
