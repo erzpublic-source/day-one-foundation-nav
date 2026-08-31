@@ -116,8 +116,8 @@ function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40 md:min-h-[720px] lg:min-h-[780px]">
-          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-32 md:pb-20 lg:px-[72px]">
-            <div className="relative z-10 order-2 md:order-1">
+          <div className="relative mx-auto grid w-full max-w-[1280px] items-start gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-28 md:pb-20 lg:px-[72px]">
+            <div className="relative z-10 order-2 md:order-1 md:max-w-[520px] lg:max-w-[560px]">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para{" "}
@@ -163,17 +163,27 @@ function Home() {
                 </p>
               </div>
             </Reveal>
+          </div>
 
-            {/* Imagen del hero: ocupa toda la mitad derecha hasta el top */}
-            <div className="relative order-1 md:absolute md:inset-y-0 md:right-0 md:left-1/2 md:order-2">
-              <img
-                src={heroImg}
-                alt="Dos mujeres conversando en un espacio de escucha activa"
-                width={1408}
-                height={1104}
-                className="h-[280px] w-full rounded-3xl object-cover object-center md:h-full md:rounded-l-[40px] md:rounded-r-none"
-              />
-            </div>
+          {/* Imagen del hero: ocupa toda la mitad derecha hasta el top y el borde */}
+          <div className="absolute inset-y-0 right-0 top-0 hidden w-[45vw] md:block lg:w-[48vw]">
+            <img
+              src={heroImg}
+              alt="Dos mujeres conversando en un espacio de escucha activa"
+              width={1408}
+              height={1104}
+              className="h-full w-full rounded-l-[40px] object-cover object-center"
+            />
+          </div>
+
+          <div className="order-1 md:hidden">
+            <img
+              src={heroImg}
+              alt="Dos mujeres conversando en un espacio de escucha activa"
+              width={1408}
+              height={1104}
+              className="h-[280px] w-full rounded-3xl object-cover object-center"
+            />
           </div>
         </section>
 
