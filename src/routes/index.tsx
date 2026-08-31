@@ -116,13 +116,13 @@ function Home() {
       <main>
         {/* HERO */}
         <section className="relative overflow-hidden bg-secondary/40 md:min-h-[720px] lg:min-h-[780px]">
-          <div className="relative mx-auto grid w-full max-w-[1280px] items-start gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-28 md:pb-20 lg:px-[72px]">
+          <div className="relative mx-auto grid w-full max-w-[1280px] items-start gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-[136px] md:pb-20 lg:px-[72px]">
             <div className="relative z-10 order-2 md:order-1 md:max-w-[520px] lg:max-w-[560px]">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para{" "}
                 <br className="hidden md:block" />
-                <span className="text-gradient-brand font-bold whitespace-nowrap">
+                <span className="text-gradient-brand font-bold">
                   volver a brillar
                 </span>
               </h1>
@@ -165,8 +165,8 @@ function Home() {
             </Reveal>
           </div>
 
-          {/* Imagen del hero: ocupa toda la mitad derecha hasta el top y el borde */}
-          <div className="absolute inset-y-0 right-0 top-0 hidden w-[45vw] md:block lg:w-[48vw]">
+          {/* Imagen del hero: ocupa toda la mitad derecha hasta el top de la sección y el borde */}
+          <div className="absolute right-0 top-[72px] hidden h-[calc(100%-72px)] w-[45vw] md:block lg:w-[48vw] lg:top-[136px] lg:h-[calc(100%-136px)]">
             <img
               src={heroImg}
               alt="Dos mujeres conversando en un espacio de escucha activa"
