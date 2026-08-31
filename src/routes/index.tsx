@@ -122,7 +122,7 @@ function Home() {
                 Un espacio
                 <br className="hidden md:block" /> seguro para{" "}
                 <br className="hidden md:block" />
-                <span className="text-gradient-brand font-bold">
+                <span className="text-gradient-brand font-bold lg:text-[3.6rem]">
                   volver a brillar
                 </span>
               </h1>
