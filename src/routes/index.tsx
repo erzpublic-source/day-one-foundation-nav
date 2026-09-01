@@ -115,8 +115,8 @@ function Home() {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-secondary/40">
-          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
+        <section className="relative overflow-hidden bg-secondary/40 md:min-h-[760px]">
+          <div className="relative mx-auto grid h-full w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
             <div className="relative z-10 order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
@@ -165,13 +165,13 @@ function Home() {
             </Reveal>
 
 
-            <div className="order-1 md:order-2 md:-mr-[72px]">
+            <div className="order-1 md:absolute md:-top-36 md:-bottom-20 md:left-1/2 md:-right-6 lg:-right-[72px] md:-z-10">
               <img
                 src={heroImg}
                 alt="Dos mujeres conversando en un espacio de escucha activa"
                 width={1408}
                 height={1104}
-                className="h-[280px] w-full rounded-3xl object-cover object-center md:h-[560px] md:rounded-l-[40px] md:rounded-r-none"
+                className="h-[280px] w-full rounded-3xl object-cover object-center md:h-full md:rounded-l-[40px] md:rounded-r-none"
               />
             </div>
           </div>
