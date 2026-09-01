@@ -115,14 +115,14 @@ function Home() {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-secondary/40 md:min-h-[720px] lg:min-h-[780px]">
-          <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-start px-6 pt-[72px] pb-12 md:pt-[136px] md:pb-20 lg:px-[72px]">
-            <div className="relative z-10 w-full max-w-[560px] md:max-w-[600px] lg:max-w-[640px]">
+        <section className="relative overflow-hidden bg-secondary/40">
+          <div className="relative mx-auto grid w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
+            <div className="relative z-10 order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para{" "}
                 <br className="hidden md:block" />
-                <span className="text-gradient-brand font-bold lg:text-[3.6rem]">
+                <span className="text-gradient-brand font-bold whitespace-nowrap">
                   volver a brillar
                 </span>
               </h1>
@@ -147,7 +147,7 @@ function Home() {
 
             <Reveal
               delay={120}
-              className="order-3 md:absolute md:bottom-14 md:left-[56%] md:z-20 md:w-[440px]"
+              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-20 md:w-[440px]"
             >
               <div
                 className="mt-10 rounded-3xl bg-card p-6 md:mt-0"
@@ -163,27 +163,17 @@ function Home() {
                 </p>
               </div>
             </Reveal>
-          </div>
 
-          {/* Imagen del hero: ocupa toda la mitad derecha hasta el top de la sección y el borde */}
-          <div className="absolute right-0 top-[72px] hidden h-[calc(100%-72px)] w-[45vw] md:block lg:w-[48vw] lg:top-[136px] lg:h-[calc(100%-136px)]">
-            <img
-              src={heroImg}
-              alt="Dos mujeres conversando en un espacio de escucha activa"
-              width={1408}
-              height={1104}
-              className="h-full w-full rounded-l-[40px] object-cover object-center"
-            />
-          </div>
 
-          <div className="order-1 md:hidden">
-            <img
-              src={heroImg}
-              alt="Dos mujeres conversando en un espacio de escucha activa"
-              width={1408}
-              height={1104}
-              className="h-[280px] w-full rounded-3xl object-cover object-center"
-            />
+            <div className="order-1 md:order-2 md:-mr-[72px]">
+              <img
+                src={heroImg}
+                alt="Dos mujeres conversando en un espacio de escucha activa"
+                width={1408}
+                height={1104}
+                className="h-[280px] w-full rounded-3xl object-cover object-center md:h-[560px] md:rounded-l-[40px] md:rounded-r-none"
+              />
+            </div>
           </div>
         </section>
 
