@@ -115,9 +115,9 @@ function Home() {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-secondary/40 md:min-h-[760px]">
+        <section className="relative overflow-hidden bg-secondary/40 md:h-[760px]">
           <div className="relative mx-auto grid h-full w-full max-w-[1280px] items-center gap-8 px-6 pt-[72px] pb-12 md:grid-cols-2 md:gap-4 md:pt-36 md:pb-20 lg:px-[72px]">
-            <div className="relative z-10 order-2 md:order-1">
+            <div className="relative z-20 order-2 md:order-1">
               <h1 className="text-[2.6rem] leading-[1.05] font-light tracking-tight text-lavanda md:text-[3.6rem] lg:text-[4.2rem]">
                 Un espacio
                 <br className="hidden md:block" /> seguro para{" "}
@@ -147,7 +147,7 @@ function Home() {
 
             <Reveal
               delay={120}
-              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-20 md:w-[440px]"
+              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-30 md:w-[440px]"
             >
               <div
                 className="mt-10 rounded-3xl bg-card p-6 md:mt-0"
@@ -165,7 +165,7 @@ function Home() {
             </Reveal>
 
 
-            <div className="order-1 md:absolute md:-top-36 md:-bottom-20 md:left-1/2 md:-right-6 lg:-right-[72px] md:-z-10">
+            <div className="order-1 md:absolute md:-top-36 md:-bottom-20 md:left-1/2 md:-right-6 lg:-right-[72px] md:z-10">
               <img
                 src={heroImg}
                 alt="Dos mujeres conversando en un espacio de escucha activa"
