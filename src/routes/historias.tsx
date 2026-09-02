@@ -136,7 +136,7 @@ function Historias() {
               <p className="mt-4 text-sm font-bold text-violeta/80">
                 Descubre las entrevistas y acústicos en nuestro canal de YouTube.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center">
                 <button
                   type="button"
                   className="btn-base btn-primary"
