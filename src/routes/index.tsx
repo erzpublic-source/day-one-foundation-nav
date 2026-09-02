@@ -165,7 +165,7 @@ function Home() {
             </Reveal>
 
 
-            <div className="order-1 md:absolute md:-top-36 md:-bottom-20 md:left-1/2 md:-right-6 lg:-right-[72px] md:-z-10">
+            <div className="order-1 md:absolute md:-top-36 md:-bottom-20 md:left-1/2 md:-right-6 lg:-right-[72px] md:z-0">
               <img
                 src={heroImg}
                 alt="Dos mujeres conversando en un espacio de escucha activa"
