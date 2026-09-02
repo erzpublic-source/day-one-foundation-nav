@@ -147,7 +147,7 @@ function Home() {
 
             <Reveal
               delay={120}
-              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-20 md:w-[440px]"
+              className="order-3 md:absolute md:bottom-14 md:left-[34%] md:z-30 md:w-[440px]"
             >
               <div
                 className="mt-10 rounded-3xl bg-card p-6 md:mt-0"
