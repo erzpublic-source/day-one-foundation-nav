@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ArrowRight, HandHeart, Headphones, Play, Video, Youtube } from "lucide-react";
 
+import heroConversacion from "@/assets/hero-conversacion.jpg";
 import historiaJaime from "@/assets/historia-jaime.jpg";
 import historiaEntrevista from "@/assets/historia-entrevista.jpg";
 import historiaComunidad from "@/assets/historia-comunidad.jpg";
