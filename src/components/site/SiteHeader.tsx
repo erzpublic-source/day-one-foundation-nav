@@ -81,7 +81,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            className="btn-base btn-sos shrink-0 px-5 py-2.5"
+            className="btn-base btn-sos h-10 shrink-0 px-5"
             aria-label="Abrir canal SOS Te escucho"
           >
             <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />

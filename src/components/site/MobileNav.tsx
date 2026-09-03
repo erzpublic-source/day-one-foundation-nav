@@ -110,7 +110,7 @@ export function MobileNav() {
         <span className="flex-1" />
         <button
           type="button"
-          className="btn-base btn-sos h-[30px] w-[162px] shrink-0 px-0 py-0"
+          className="btn-base btn-sos h-10 w-[162px] shrink-0 px-0 py-0"
         >
           <MessageSquare className="h-4 w-4 shrink-0" strokeWidth={2.4} />
           <span className="text-sm font-bold">
