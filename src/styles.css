@@ -248,7 +248,8 @@
   font-family: Quicksand, sans-serif;
   font-size: 14px;
   font-weight: 700;
-
+  height: 40px;
+  min-height: 40px;
 
   &:hover {
     background: color-mix(in oklab, var(--verde) 10%, var(--card));
