@@ -153,6 +153,22 @@ function Historias() {
                   Ver Acústicos
                 </button>
               </div>
+
+              {/* Círculos de historias — mobile y tablet */}
+              <div className="relative mt-12 mb-10 flex items-center justify-center lg:hidden">
+                <img
+                  src={heroConversacion}
+                  alt="Mujer en una conversación de apoyo"
+                  loading="lazy"
+                  className="z-10 h-36 w-36 rounded-full border-4 border-white object-cover shadow-lg md:h-48 md:w-48"
+                />
+                <img
+                  src={historiaJaime}
+                  alt="Jaime Valencia con su guitarra"
+                  loading="lazy"
+                  className="z-20 -ml-6 h-36 w-36 rounded-full border-4 border-white object-cover shadow-lg md:-ml-10 md:h-48 md:w-48"
+                />
+              </div>
             </Reveal>
           </div>
         </section>
