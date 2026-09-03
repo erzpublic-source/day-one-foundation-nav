@@ -166,6 +166,7 @@
   font-weight: 700;
   font-size: 0.95rem;
   line-height: 1;
+  min-height: 50px;
   cursor: pointer;
   transition:
     transform 0.22s cubic-bezier(0.2, 0.8, 0.3, 1),
