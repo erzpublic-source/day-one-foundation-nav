@@ -124,6 +124,22 @@ function Historias() {
           />
           <div className="relative mx-auto w-full max-w-[900px] px-6 pt-[104px] pb-16 text-center md:pt-40 md:pb-24 lg:px-[72px]">
             <Reveal>
+              {/* Círculos de historias — mobile y tablet */}
+              <div className="relative mb-8 flex items-center justify-center lg:hidden">
+                <img
+                  src={heroConversacion}
+                  alt="Mujer en una conversación de apoyo"
+                  loading="lazy"
+                  className="z-10 h-36 w-36 rounded-full border-4 border-white object-cover shadow-lg md:h-48 md:w-48"
+                />
+                <img
+                  src={historiaJaime}
+                  alt="Jaime Valencia con su guitarra"
+                  loading="lazy"
+                  className="z-20 -ml-6 h-36 w-36 rounded-full border-4 border-white object-cover shadow-lg md:-ml-10 md:h-48 md:w-48"
+                />
+              </div>
+
               <h1 className="text-[2.2rem] leading-[1.08] font-light tracking-tight text-lavanda md:text-[3.4rem]">
                 Historias que merecen
                 <br />
@@ -152,22 +168,6 @@ function Historias() {
                 >
                   Ver Acústicos
                 </button>
-              </div>
-
-              {/* Círculos de historias — mobile y tablet */}
-              <div className="relative mt-12 mb-10 flex items-center justify-center lg:hidden">
-                <img
-                  src={heroConversacion}
-                  alt="Mujer en una conversación de apoyo"
-                  loading="lazy"
-                  className="z-10 h-36 w-36 rounded-full border-4 border-white object-cover shadow-lg md:h-48 md:w-48"
-                />
-                <img
-                  src={historiaJaime}
-                  alt="Jaime Valencia con su guitarra"
-                  loading="lazy"
-                  className="z-20 -ml-6 h-36 w-36 rounded-full border-4 border-white object-cover shadow-lg md:-ml-10 md:h-48 md:w-48"
-                />
               </div>
             </Reveal>
           </div>
