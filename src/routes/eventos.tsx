@@ -111,7 +111,7 @@ function Eventos() {
                   e.currentTarget.style.boxShadow = "var(--shadow-n1)";
                 }}
               >
-                <span className="flex flex-col p-7 md:order-1 md:p-10">
+                <span className="order-2 flex flex-col p-7 md:order-1 md:p-10">
                   <span className="eyebrow w-fit rounded-full bg-amarillo/40 px-2.5 py-1 text-tinta">
                     Evento destacado
                   </span>
@@ -143,7 +143,7 @@ function Eventos() {
                     Quiero saber más
                   </span>
                 </span>
-                <span className="block overflow-hidden md:order-2">
+                <span className="order-1 block overflow-hidden md:order-2">
                   <img
                     src={eventoLanzamiento}
                     alt="Comunidad reunida en un taller creativo de bienestar"
