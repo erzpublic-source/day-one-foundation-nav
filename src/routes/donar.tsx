@@ -129,7 +129,7 @@ function Donar() {
             className="pointer-events-none absolute -top-32 -left-24 h-[420px] w-[520px] rounded-full opacity-20 blur-3xl"
             style={{ background: "var(--gradient-brand)" }}
           />
-          <div className="relative mx-auto w-full max-w-[1280px] px-6 pt-[92px] pb-14 md:pt-32 md:pb-24 lg:px-[72px]">
+          <div className="relative mx-auto w-full max-w-[1280px] px-6 pt-[92px] pb-14 md:pt-32 md:pb-14 lg:px-[72px]">
             <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
               <Reveal className="order-2 md:order-1">
                 <h1 className="text-[2.4rem] leading-[1.05] tracking-tight md:text-[3.4rem]">
