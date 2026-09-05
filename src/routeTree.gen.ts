@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as DonarRouteImport } from './routes/donar'
 import { Route as EventosRouteImport } from './routes/eventos'
 import { Route as HistoriasRouteImport } from './routes/historias'
+import { Route as VoluntariadoRouteImport } from './routes/voluntariado'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const HistoriasRoute = HistoriasRouteImport.update({
   path: '/historias',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VoluntariadoRoute = VoluntariadoRouteImport.update({
+  id: '/voluntariado',
+  path: '/voluntariado',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/donar': typeof DonarRoute
   '/eventos': typeof EventosRoute
   '/historias': typeof HistoriasRoute
+  '/voluntariado': typeof VoluntariadoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/donar': typeof DonarRoute
   '/eventos': typeof EventosRoute
   '/historias': typeof HistoriasRoute
+  '/voluntariado': typeof VoluntariadoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,14 @@ export interface FileRoutesById {
   '/donar': typeof DonarRoute
   '/eventos': typeof EventosRoute
   '/historias': typeof HistoriasRoute
+  '/voluntariado': typeof VoluntariadoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/donar' | '/eventos' | '/historias'
+  fullPaths: '/' | '/donar' | '/eventos' | '/historias' | '/voluntariado'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/donar' | '/eventos' | '/historias'
-  id: '__root__' | '/' | '/donar' | '/eventos' | '/historias'
+  to: '/' | '/donar' | '/eventos' | '/historias' | '/voluntariado'
+  id: '__root__' | '/' | '/donar' | '/eventos' | '/historias' | '/voluntariado'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +76,7 @@ export interface RootRouteChildren {
   DonarRoute: typeof DonarRoute
   EventosRoute: typeof EventosRoute
   HistoriasRoute: typeof HistoriasRoute
+  VoluntariadoRoute: typeof VoluntariadoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +109,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HistoriasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/voluntariado': {
+      id: '/voluntariado'
+      path: '/voluntariado'
+      fullPath: '/voluntariado'
+      preLoaderRoute: typeof VoluntariadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +124,7 @@ const rootRouteChildren: RootRouteChildren = {
   DonarRoute: DonarRoute,
   EventosRoute: EventosRoute,
   HistoriasRoute: HistoriasRoute,
+  VoluntariadoRoute: VoluntariadoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
