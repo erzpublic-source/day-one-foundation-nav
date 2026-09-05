@@ -124,13 +124,9 @@ function Donar() {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-lila-soft/50">
-          <div
-            className="pointer-events-none absolute -top-32 -left-24 h-[420px] w-[520px] rounded-full opacity-20 blur-3xl"
-            style={{ background: "var(--gradient-brand)" }}
-          />
-          <div className="relative mx-auto w-full max-w-[1280px] px-6 pt-[92px] pb-14 md:pt-32 md:pb-14 lg:px-[72px]">
-            <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+        <section className="relative overflow-hidden bg-background">
+          <div className="relative mx-auto w-full max-w-[1280px] px-6 pt-[92px] pb-14 md:pt-32 md:pb-24 lg:px-[72px]">
+            <div className="grid items-center gap-8 md:grid-cols-[1fr_480px] md:gap-14">
               <Reveal>
                 <h1 className="text-[2.4rem] leading-[1.05] tracking-tight md:text-[3.4rem]">
                   <span className="block font-light text-lavanda">Tu aporte puede</span>
@@ -148,31 +144,31 @@ function Donar() {
                 </div>
               </Reveal>
 
-              <Reveal delay={80}>
-                <img
-                  src={donacionManos}
-                  alt="Mano abierta recibiendo luz cálida"
-                  width={1200}
-                  height={900}
-                  className="h-56 w-full rounded-[28px] object-cover md:h-[330px]"
-                  style={{ boxShadow: "var(--shadow-n2)" }}
-                />
+              <Reveal delay={80} className="md:justify-self-end">
+                <div className="relative md:h-[420px] md:w-[480px]">
+                  <img
+                    src={donacionManos}
+                    alt="Mano abierta recibiendo luz cálida"
+                    width={1200}
+                    height={900}
+                    className="h-56 w-full rounded-[28px] object-cover md:h-[420px] md:w-[480px]"
+                    style={{ boxShadow: "var(--shadow-n2)" }}
+                  />
+
+                  <div
+                    className="relative z-10 mt-6 rounded-[24px] bg-card p-6 md:absolute md:-bottom-12 md:-left-[280px] md:mt-0 md:w-[540px] md:p-7"
+                    style={{ boxShadow: "var(--shadow-n2)" }}
+                  >
+                    <p className="eyebrow text-[#9981C1]">• Un día más puede comenzar contigo.</p>
+                    <p className="mt-3 text-[0.95rem] leading-relaxed text-muted-foreground">
+                      Cada donación nos ayuda a brindar orientación, educación emocional,
+                      acompañamiento psicosocial y atención en salud mental a personas que
+                      necesitan una oportunidad para continuar.
+                    </p>
+                  </div>
+                </div>
               </Reveal>
             </div>
-
-            <Reveal delay={140}>
-              <div
-                className="mt-6 rounded-[24px] bg-card p-6 md:-mt-16 md:max-w-[520px] md:p-7"
-                style={{ boxShadow: "var(--shadow-n2)" }}
-              >
-                <p className="eyebrow text-[#9981C1]">• Un día más puede comenzar contigo.</p>
-                <p className="mt-3 text-[0.95rem] leading-relaxed text-muted-foreground">
-                  Cada donación nos ayuda a brindar orientación, educación emocional,
-                  acompañamiento psicosocial y atención en salud mental a personas que necesitan
-                  una oportunidad para continuar.
-                </p>
-              </div>
-            </Reveal>
 
             <div className="mt-7 flex flex-col gap-3 md:hidden">
               <button type="button" className="btn-base btn-support w-full">
