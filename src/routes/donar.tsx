@@ -131,7 +131,7 @@ function Donar() {
           />
           <div className="relative mx-auto w-full max-w-[1280px] px-6 pt-[92px] pb-14 md:pt-32 md:pb-14 lg:px-[72px]">
             <div className="grid items-center gap-8 md:grid-cols-2 md:gap-12">
-              <Reveal className="order-2 md:order-1">
+              <Reveal>
                 <h1 className="text-[2.4rem] leading-[1.05] tracking-tight md:text-[3.4rem]">
                   <span className="block font-light text-lavanda">Tu aporte puede</span>
                   <span className="block font-bold text-gradient-brand">cambiar una vida</span>
@@ -148,7 +148,7 @@ function Donar() {
                 </div>
               </Reveal>
 
-              <Reveal delay={80} className="order-1 md:order-2">
+              <Reveal delay={80}>
                 <img
                   src={donacionManos}
                   alt="Mano abierta recibiendo luz cálida"
