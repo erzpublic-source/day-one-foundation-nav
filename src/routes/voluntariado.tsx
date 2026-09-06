@@ -119,7 +119,7 @@ function Voluntariado() {
               "linear-gradient(180deg, var(--background) 0%, var(--rosa-soft) 45%, var(--rosa-soft) 100%)",
           }}
         >
-          <div className="mx-auto w-full max-w-[1280px] px-6 pt-[92px] pb-12 text-center md:pt-24 md:pb-16 lg:px-[72px]">
+          <div className="mx-auto w-full max-w-[1280px] px-6 pt-[104px] pb-12 text-center md:pt-32 md:pb-16 lg:px-[72px]">
             <Reveal>
               <img
                 src={equipo}

@@ -1,6 +1,6 @@
 export type NavItem = {
   label: string;
-  to?: "/" | "/historias" | "/eventos" | "/donar";
+  to?: "/" | "/historias" | "/eventos" | "/donar" | "/voluntariado";
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -8,6 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Historias", to: "/historias" },
   { label: "Eventos", to: "/eventos" },
   { label: "Donar", to: "/donar" },
-  { label: "Voluntariado" },
+  { label: "Voluntariado", to: "/voluntariado" },
   { label: "Contacto" },
 ];
+
