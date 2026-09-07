@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight,
@@ -13,6 +13,7 @@ import {
   Phone,
   Stethoscope,
   User,
+  X,
 } from "lucide-react";
 
 import equipo from "@/assets/voluntariado-equipo.png";
@@ -97,6 +98,9 @@ function Voluntariado() {
     celular: "",
   });
   const [cvFile, setCvFile] = useState<File | null>(null);
+  const [cvError, setCvError] = useState<string | null>(null);
+  const cvInputRef = useRef<HTMLInputElement>(null);
+  const MAX_CV_SIZE = 5 * 1024 * 1024; // 5 MB
 
   const canSubmit =
     form.nombre.trim() &&
@@ -110,6 +114,24 @@ function Voluntariado() {
 
   const update = (key: keyof typeof form, value: string) => {
     setForm((prev) => ({ ...prev, [key]: value }));
+  };
+
+  const handleCvChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    if (file && file.size > MAX_CV_SIZE) {
+      setCvError("El archivo pesa más de 5 MB. Sube un documento más liviano (PDF, DOC o DOCX).");
+      setCvFile(null);
+      if (cvInputRef.current) cvInputRef.current.value = "";
+      return;
+    }
+    setCvError(null);
+    setCvFile(file);
+  };
+
+  const clearCv = () => {
+    setCvFile(null);
+    setCvError(null);
+    if (cvInputRef.current) cvInputRef.current.value = "";
   };
 
   const openDoc = (which: "privacidad" | "terminos") => {
