@@ -89,6 +89,29 @@ function Voluntariado() {
   const [acceptPrivacy, setAcceptPrivacy] = useState(false);
   const [acceptTerms, setAcceptTerms] = useState(false);
 
+  const [form, setForm] = useState({
+    nombre: "",
+    fecha: "",
+    especialidad: "",
+    ciudad: "",
+    celular: "",
+  });
+  const [cvFile, setCvFile] = useState<File | null>(null);
+
+  const canSubmit =
+    form.nombre.trim() &&
+    form.fecha &&
+    form.especialidad.trim() &&
+    form.ciudad.trim() &&
+    form.celular.trim() &&
+    cvFile &&
+    acceptPrivacy &&
+    acceptTerms;
+
+  const update = (key: keyof typeof form, value: string) => {
+    setForm((prev) => ({ ...prev, [key]: value }));
+  };
+
   const openDoc = (which: "privacidad" | "terminos") => {
     setTarget(which);
     setModalDoc(which === "privacidad" ? PRIVACY_DOC : TERMS_DOC);
@@ -219,6 +242,31 @@ function Voluntariado() {
                         <input
                           type={f.type}
                           placeholder={f.placeholder}
+                          value={
+                            f.label === "Nombre del Profesional"
+                              ? form.nombre
+                              : f.label === "Fecha de Disponibilidad"
+                                ? form.fecha
+                                : f.label === "Especialidad Clínica"
+                                  ? form.especialidad
+                                  : f.label === "Ciudad de Residencia"
+                                    ? form.ciudad
+                                    : form.celular
+                          }
+                          onChange={(e) =>
+                            update(
+                              f.label === "Nombre del Profesional"
+                                ? "nombre"
+                                : f.label === "Fecha de Disponibilidad"
+                                  ? "fecha"
+                                  : f.label === "Especialidad Clínica"
+                                    ? "especialidad"
+                                    : f.label === "Ciudad de Residencia"
+                                      ? "ciudad"
+                                      : "celular",
+                              e.target.value
+                            )
+                          }
                           className="h-12 w-full rounded-full border border-border bg-rosa-soft/70 pr-4 pl-11 text-sm text-tinta transition-all duration-300 outline-none placeholder:text-muted-foreground focus:border-lavanda focus:ring-4 focus:ring-lavanda/25"
                         />
                       </span>
@@ -229,13 +277,14 @@ function Voluntariado() {
                     <span className="text-sm font-bold text-tinta">Hoja de Vida / Credenciales</span>
                     <span className="relative mt-2 flex h-12 items-center gap-3 rounded-full border border-border bg-rosa-soft/70 px-4 transition-colors duration-300 hover:border-lavanda">
                       <FileText className="h-4 w-4 shrink-0 text-violeta/70" strokeWidth={2.2} />
-                      <span className="text-sm text-muted-foreground">
-                        Seleccionar archivo (PDF, DOCX)
+                      <span className="truncate text-sm text-muted-foreground">
+                        {cvFile ? cvFile.name : "Seleccionar archivo (PDF, DOCX)"}
                       </span>
                       <input
                         type="file"
                         accept=".pdf,.doc,.docx"
                         className="absolute inset-0 cursor-pointer opacity-0"
+                        onChange={(e) => setCvFile(e.target.files?.[0] ?? null)}
                       />
                     </span>
                   </label>
@@ -262,7 +311,7 @@ function Voluntariado() {
 
                 <button
                   type="submit"
-                  disabled={!acceptPrivacy || !acceptTerms}
+                  disabled={!canSubmit}
                   className="btn-base btn-secondary mt-7 w-full disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   Enviar solicitud
@@ -279,6 +328,7 @@ function Voluntariado() {
           </div>
         </section>
       </main>
+
 
       <footer className="bg-[#FAFAF8] pt-14">
         <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-6 pb-10 md:grid-cols-4 lg:px-[72px]">
