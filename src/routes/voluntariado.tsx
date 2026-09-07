@@ -13,6 +13,7 @@ import {
   Phone,
   Stethoscope,
   User,
+  X,
 } from "lucide-react";
 
 import equipo from "@/assets/voluntariado-equipo.png";
